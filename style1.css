@@ -1,0 +1,281 @@
+:root {
+    /* Color Palette - Dark Mode Modern */
+    --bg-body: #101010;
+    --bg-card: #1E1E1E;
+    --bg-input: #2C2C2C;
+    --text-main: #FFFFFF;
+    --text-muted: #A1A1AA;
+    --accent-primary: #6366f1; /* Indigo */
+    --accent-hover: #4f46e5;
+    
+    /* Status Colors */
+    --status-new-bg: rgba(59, 130, 246, 0.2);
+    --status-new-text: #60A5FA;
+    --status-hot-bg: rgba(239, 68, 68, 0.2);
+    --status-hot-text: #F87171;
+    --status-active-bg: rgba(34, 197, 94, 0.2);
+    --status-active-text: #4ADE80;
+
+    /* Spacing & Layout */
+    --radius-card: 16px;
+    --radius-btn: 30px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.5;
+    padding-bottom: 60px; /* Space for footer */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Header & Nav --- */
+header {
+    background-color: var(--bg-card);
+    padding: var(--space-md) var(--space-lg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--accent-primary);
+}
+
+nav {
+    display: flex;
+    gap: var(--space-md);
+    overflow-x: auto; /* Scrollable on very small screens */
+    white-space: nowrap;
+}
+
+nav a {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover, nav a.active {
+    color: var(--text-main);
+}
+
+/* --- Layout Containers --- */
+.container {
+    max-width: 600px; /* Mobile app feel restricted width */
+    margin: 0 auto;
+    padding: var(--space-lg) var(--space-md);
+}
+
+.page-title {
+    margin-bottom: var(--space-lg);
+    font-size: 1.5rem;
+}
+
+/* --- CSS-Only Tabs (The Magic) --- */
+.tab-container {
+    margin-bottom: var(--space-lg);
+}
+
+/* Hide actual radio buttons */
+input[name="view-toggle"] {
+    display: none;
+}
+
+.tab-controls {
+    display: flex;
+    background: var(--bg-card);
+    padding: 4px;
+    border-radius: var(--radius-btn);
+    margin-bottom: var(--space-lg);
+}
+
+.tab-label {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: var(--radius-btn);
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Logic: When radio #tab1 is checked, style label for tab1 */
+#tab1:checked ~ .tab-controls label[for="tab1"],
+#tab2:checked ~ .tab-controls label[for="tab2"] {
+    background-color: var(--accent-primary);
+    color: white;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
+
+/* Content Visibility */
+.content-section {
+    display: none; /* Hidden by default */
+    animation: fadeIn 0.4s ease;
+}
+
+/* Show specific content based on checked radio */
+#tab1:checked ~ #content-jobs { display: block; }
+#tab2:checked ~ #content-news { display: block; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Job Cards --- */
+.card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-card);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-md);
+    transition: transform 0.2s;
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    border-color: #333;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-sm);
+}
+
+.job-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.company-name {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-md);
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: var(--space-lg);
+}
+
+.tag {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: var(--bg-input);
+    color: var(--text-muted);
+}
+
+.badge {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.badge.new { background: var(--status-new-bg); color: var(--status-new-text); }
+.badge.hot { background: var(--status-hot-bg); color: var(--status-hot-text); }
+.badge.active { background: var(--status-active-bg); color: var(--status-active-text); }
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #333;
+    padding-top: var(--space-md);
+}
+
+.salary {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.btn-apply {
+    background-color: var(--text-main);
+    color: var(--bg-body);
+    padding: 8px 16px;
+    border-radius: var(--radius-btn);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* --- News List --- */
+.news-item {
+    background: var(--bg-card);
+    padding: var(--space-md);
+    border-radius: var(--radius-card);
+    margin-bottom: var(--space-md);
+    border-left: 4px solid var(--accent-primary);
+}
+
+.news-date {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.news-title {
+    font-weight: 600;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: var(--space-lg);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    border-top: 1px solid #333;
+    margin-top: var(--space-lg);
+}
+
+/* --- Responsive Desktop Tweaks --- */
+@media (min-width: 768px) {
+    .container {
+        max-width: 900px;
+    }
+    
+    /* Grid layout for jobs on larger screens */
+    #content-jobs, .job-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+    
+    /* Override toggle display property conflict for grid */
+    #tab1:checked ~ #content-jobs {
+        display: grid;
+    }
+}

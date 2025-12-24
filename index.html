@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrollJob - Find Your Career</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Scroll<span>Job</span></div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="internships.html">Internships</a>
+            <a href="news.html">News</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- CSS-Only Toggle System -->
+        <div class="tab-container">
+            <!-- Hidden Radio Inputs -->
+            <input type="radio" name="view-toggle" id="tab1" checked>
+            <input type="radio" name="view-toggle" id="tab2">
+
+            <!-- Toggle Buttons -->
+            <div class="tab-controls">
+                <label for="tab1" class="tab-label"><a href="jobs.html" class="active">Jobs</a></label>
+                <label for="tab2" class="tab-label"><a href="news.html">News</a></label>
+            </div>
+
+            <!-- TAB 1: JOB LISTINGS -->
+            <div id="content-jobs" class="content-section">
+                
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="badge new">New Today</div>
+                        <!-- Company Logo Placeholder -->
+                        <div style="width:32px; height:32px; background:#333; border-radius:50%;"></div>
+                    </div>
+                    <div class="job-title">Middle UX/UI Designer</div>
+                    <div class="company-name">Dropbox • Remote</div>
+                    <div class="tags">
+                        <span class="tag">Figma</span>
+                        <span class="tag">Sketch</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="salary">$1,200 - $1,500</div>
+                        <a href="#" class="btn-apply">Apply</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="badge hot">Ending Soon</div>
+                        <div style="width:32px; height:32px; background:#FF5A5F; border-radius:50%;"></div>
+                    </div>
+                    <div class="job-title">JavaScript Developer</div>
+                    <div class="company-name">Poker Stars • Office</div>
+                    <div class="tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="salary">$2,400 - $2,800</div>
+                        <a href="#" class="btn-apply">Apply</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="badge active">Quick Apply</div>
+                        <div style="width:32px; height:32px; background:#000; border-radius:50%;"></div>
+                    </div>
+                    <div class="job-title">Content Manager (SMM)</div>
+                    <div class="company-name">Apple Inc. • Hybrid</div>
+                    <div class="tags">
+                        <span class="tag">English C1</span>
+                        <span class="tag">Copywriting</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="salary">$55/hr</div>
+                        <a href="#" class="btn-apply">Apply</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TAB 2: NEWS -->
+            <div id="content-news" class="content-section">
+                <div class="news-item">
+                    <span class="news-date">Dec 21, 2025</span>
+                    <div class="news-title">Tech hiring surges in Toronto for Q1 2026.</div>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Dec 20, 2025</span>
+                    <div class="news-title">5 Resume tips for Junior Developers.</div>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Dec 18, 2025</span>
+                    <div class="news-title">Remote work policies updated for major EU tech firms.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>ScrollJob © 2025</p>
+        <p>Built for students</p>
+    </footer>
+
+</body>
+</html>
