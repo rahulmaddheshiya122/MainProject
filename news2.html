@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INKBYTE - Premium News</title>
+    <!-- Google Fonts: Manrope for the clean, geometric look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. HEADER & NAVBAR -->
+    <header class="site-header">
+        <div class="logo-container">
+            <div class="logo-icon">◎</div>
+            <div class="logo-text">INKBYTE</div>
+        </div>
+        <nav class="navbar">
+            <a href="#" target="_blank" class="nav-item active">HOME</a>
+            <a href="#" target="_blank" class="nav-item">Top News</a>
+            <a href="#" target="_blank" class="nav-item">Technology</a>
+            <a href="#" target="_blank" class="nav-item">Tech & Jobs</a>
+        </nav>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero-section">
+        <h1 class="hero-headline">Find News that Meet With<br>Your Needs</h1>
+        <div class="search-wrapper">
+            <span class="search-icon">🔍</span>
+            <input type="text" class="search-input" placeholder="Search any news that suit you">
+            <button class="search-btn">Search News</button>
+        </div>
+    </section>
+
+    <!-- MAIN CONTAINER -->
+    <main class="container">
+
+        <!-- 3. MAIN FEATURED SECTION -->
+        <section class="featured-grid">
+            <!-- Left: Large Featured Card -->
+            <article class="main-card">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=1200&auto=format&fit=crop" alt="Music Stage" class="bg-img">
+                <div class="overlay-content">
+                    <h2 class="article-title">Mysterious Album Teased with Midnight Countdown and Cryptic Visuals</h2>
+                    <p class="article-summary">A surprise album announcement has taken the music world by storm after a major label dropped a cryptic countdown timer on their homepage.</p>
+                    <div class="author-row">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100" alt="Author" class="avatar">
+                        <span>J. Lane, Staff Writer</span>
+                    </div>
+                </div>
+                <div class="corner-arrow orange-arrow">↗</div>
+            </article>
+
+            <!-- Right: Vertical List -->
+            <div class="side-list">
+                <!-- Card 1 -->
+                <article class="side-card">
+                    <div class="side-img-box">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400" alt="Health App">
+                    </div>
+                    <div class="side-content">
+                        <h3>AI-Powered App Claims to Diagnose Skin Conditions with 92% Accuracy</h3>
+                        <div class="author-mini">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=50" class="avatar-xs">
+                            <span>Dr. Leena Ramesh</span>
+                        </div>
+                    </div>
+                    <div class="mini-arrow">↗</div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="side-card">
+                    <div class="side-img-box">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400" alt="Social Media">
+                    </div>
+                    <div class="side-content">
+                        <h3>Major Social Platform Tests "Quiet Mode" to Curb Digital Burnout</h3>
+                        <div class="author-mini">
+                            <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=50" class="avatar-xs">
+                            <span>Alex Zhu</span>
+                        </div>
+                    </div>
+                    <div class="mini-arrow">↗</div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="side-card">
+                    <div class="side-img-box">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb7d5fa5?w=400" alt="Climate">
+                    </div>
+                    <div class="side-content">
+                        <h3>Historic Climate Pact Reached After Negotiation Marathon</h3>
+                        <div class="author-mini">
+                            <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=50" class="avatar-xs">
+                            <span>Serena Ngo</span>
+                        </div>
+                    </div>
+                    <div class="mini-arrow">↗</div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 4. LATEST NEWS (Horizontal Scroll) -->
+        <section class="section-block">
+            <div class="section-header">
+                <h2>Latest News</h2>
+                <div class="nav-controls">
+                    <span class="nav-arrow">←</span>
+                    <span class="nav-arrow">→</span>
+                </div>
+            </div>
+
+            <div class="horizontal-scroll">
+                <!-- Item 1 -->
+                <article class="scroll-card">
+                    <div class="scroll-img">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400" alt="Solar Flare">
+                        <div class="corner-arrow dark-arrow">↗</div>
+                    </div>
+                    <div class="scroll-content">
+                        <h4>Rare Solar Flare Sparks Global Auroras</h4>
+                        <div class="author-mini">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=50" class="avatar-xs">
+                            <span>Lina Carter</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 2 -->
+                <article class="scroll-card">
+                    <div class="scroll-img">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400" alt="AI Chat">
+                        <div class="corner-arrow dark-arrow">↗</div>
+                    </div>
+                    <div class="scroll-content">
+                        <h4>AI Tutors Launch in Rural Schools</h4>
+                        <div class="author-mini">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50" class="avatar-xs">
+                            <span>Rahul Desai</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 3 -->
+                <article class="scroll-card">
+                    <div class="scroll-img">
+                        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=400" alt="Car">
+                        <div class="corner-arrow dark-arrow">↗</div>
+                    </div>
+                    <div class="scroll-content">
+                        <h4>Electric Cars Outnumber Gas Vehicles</h4>
+                        <div class="author-mini">
+                            <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=50" class="avatar-xs">
+                            <span>Luis Garza</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Item 4 -->
+                <article class="scroll-card">
+                    <div class="scroll-img">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400" alt="Tech">
+                        <div class="corner-arrow dark-arrow">↗</div>
+                    </div>
+                    <div class="scroll-content">
+                        <h4>New Chip Architecture Revealed</h4>
+                        <div class="author-mini">
+                            <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=50" class="avatar-xs">
+                            <span>Mark T.</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 5. POPULAR STORY (Dark Background) -->
+    <section class="popular-section">
+        <div class="container">
+            <div class="popular-header">
+                <h2>Popular Story</h2>
+                <a href="#" target="_blank" class="btn-pill orange-bg">See more news ↗</a>
+            </div>
+
+            <div class="popular-grid">
+                <div class="pop-featured-img">
+                    <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1000" alt="Space Station">
+                    <div class="corner-arrow white-arrow">↗</div>
+                </div>
+                <div class="pop-content">
+                    <h2 class="pop-headline">Construction Begins on International Space Agencies' New Orbital Station</h2>
+                    <p class="pop-desc">A collaborative initiative among major international space agencies has officially commenced the construction of a next-generation orbital space station, designed to serve as a critical hub for future deep space exploration.</p>
+                    <div class="author-row light-text">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" class="avatar">
+                        <span>Marcus Iliev</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sub Grid -->
+            <div class="sub-grid">
+                <div class="sub-card">
+                    <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=200" alt="City">
+                    <div class="sub-text">
+                        <h5>Ten Smart Cities Go Fully Digital</h5>
+                        <span>James Okoro</span>
+                    </div>
+                    <div class="mini-arrow-circle">↗</div>
+                </div>
+                <div class="sub-card">
+                    <img src="https://images.unsplash.com/photo-1625246333195-58f216f73635?w=200" alt="Farm">
+                    <div class="sub-text">
+                        <h5>Vertical Farms Bring Fresh Produce</h5>
+                        <span>Leo Mbatha</span>
+                    </div>
+                    <div class="mini-arrow-circle">↗</div>
+                </div>
+                <div class="sub-card">
+                    <img src="https://images.unsplash.com/photo-1592478411213-61535f94d0ac?w=200" alt="VR">
+                    <div class="sub-text">
+                        <h5>Virtual Reality History Lessons</h5>
+                        <span>Henrik Sorensen</span>
+                    </div>
+                    <div class="mini-arrow-circle">↗</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. HIGHLIGHT SECTION -->
+    <main class="container">
+        <section class="section-block">
+            <h2 class="section-label">Highlight</h2>
+            <article class="highlight-card">
+                <img src="https://images.unsplash.com/photo-1512418490979-5931f661ee86?q=80&w=1200" alt="Smart Clothing" class="bg-img">
+                <div class="overlay-content">
+                    <h2 class="article-title">Smart Clothing Tracks Health Stats and Sends Alerts to Users in Real Time</h2>
+                    <p class="article-summary">New wearable technology, seamlessly woven into everyday clothing, is revolutionizing personal health monitoring with advanced fabric technology.</p>
+                    <div class="author-row">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100" class="avatar">
+                        <span>J. Lane, Staff Writer</span>
+                    </div>
+                </div>
+                <div class="corner-arrow dark-box-arrow">↗</div>
+            </article>
+        </section>
+
+        <!-- Newsletter / Bottom CTA -->
+        <div class="bottom-cta">
+            <div class="logo-container centered-logo">
+                <div class="logo-icon">◎</div>
+                <div class="logo-text">INKBYTE</div>
+            </div>
+            <h2>Find News that Meet With<br>Your Needs</h2>
+            <button class="search-btn">Join Newsletter</button>
+        </div>
+    </main>
+
+    <!-- 7. FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Col 1 -->
+            <div class="footer-col">
+                <div class="logo-icon white-icon">◎</div>
+            </div>
+            
+            <!-- Col 2 -->
+            <div class="footer-col">
+                <h4>TOPICS</h4>
+                <ul>
+                    <li><a href="#" target="_blank">Music</a></li>
+                    <li><a href="#" target="_blank">Sport</a></li>
+                    <li><a href="#" target="_blank">Economy</a></li>
+                    <li><a href="#" target="_blank">Politics</a></li>
+                    <li><a href="#" target="_blank">Technology</a></li>
+                    <li><a href="#" target="_blank">Science</a></li>
+                    <li><a href="#" target="_blank">Weather</a></li>
+                    <li><a href="#" target="_blank">World</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3 -->
+            <div class="footer-col">
+                <h4>QUICK LINKS</h4>
+                <ul>
+                    <li><a href="#" target="_blank">Home</a></li>
+                    <li><a href="#" target="_blank">Latest News</a></li>
+                    <li><a href="#" target="_blank">Last chance</a></li>
+                    <li><a href="#" target="_blank">About Us</a></li>
+                    <li><a href="#" target="_blank">Contact Us</a></li>
+                    <li><a href="#" target="_blank">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4 -->
+            <div class="footer-col">
+                <h4>CONTACT</h4>
+                <p>+1 (555) 234-5678</p>
+                <p>news@inkbyte.com</p>
+                <a href="#" target="_blank" class="contact-link">Contact us</a>
+            </div>
+        </div>
+        
+        <div class="copyright-bar">
+            <span>INKBYTE</span>
+            <span>&copy; 2025 — Copyright</span>
+        </div>
+    </footer>
+
+</body>
+</html>
